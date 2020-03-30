@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<view class="swiper">
+	<swiper class="swiper_inner" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#f05a23" autoplay="{{true}}" interval="2000" current="2" duration="500" vertical="{{false}}" circular="{{true}}">
+		<swiper-item>
+			<image src="/images/1.jpg"></image>
+		</swiper-item>
+		<swiper-item>
+			<image src="/images/2.jpg"></image>
+		</swiper-item>
+		<swiper-item>
+			<image src="/images/3.png"></image>
+		</swiper-item>
+	</swiper>
+</view>
+<view class="slider_content">
+	<view class="slider_head">
+		<text>热门活动</text>
+		<text class="right">全部8个</text>
+	</view>
+	<view class="slider_main">
+		<scroll-view class="scroll_view" scroll-x="{{true}}">
+			<view class="scroll_content">
+				<image src='/images/1.jpg'></image>
+				11.11
+			</view>
+			<view class="scroll_content">
+				<image src='/images/2.jpg'></image>
+				11.11
+			</view>
+			<view class="scroll_content">
+				<image src='/images/3.png'></image>
+				11.11
+			</view>
+		</scroll-view>
+	</view>
+</view>
+<view class="grayTiao"></view>
+<view class="introduce">
+	<view class="slider_head">
+		<text>为你推荐</text>
+		<text></text>
+	</view>
+	<view class="introduce_content">
+		<view class="introduce_list">
+			<view>
+				<image src='/images/1.jpg'></image>
+			</view>
+			<view>
+				<text>小福星沙尔</text>
+				<text class="description">134中</text>
+				<text class="button">立即预约</text>
+			</view>
+		</view>
+    <view class="introduce_list">
+			<view>
+				<image src='/images/2.jpg'></image>
+			</view>
+			<view>
+				<text>小福星沙尔</text>
+				<text class="description">134中</text>
+				<text class="button">立即预约</text>
+			</view>
+		</view>
+    <view class="introduce_list">
+			<view>
+				<image src='/images/3.png'></image>
+			</view>
+			<view>
+				<text>小福星沙尔</text>
+				<text class="description">134中</text>
+				<text class="button">立即预约</text>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="bottom">
+<view class="bottom_menu">
+<text space='nbsp'>首页   |   保险   |   银行   |   贷款</text>
+
+</view>
+<view class="bottom_title">
+    <text class="bottom_big_title">中国平安</text>
+    <text>金融 . 科技</text>
+</view>
+<text>icp许可证号 粤icp备06123312号</text>
+<text>粤公安网备 4324554356346636号</text>
+<text>该网站制车ipv6</text>
+</view>

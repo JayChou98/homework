@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "平安官网",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#555",
+    "selectedColor": "#f05a23",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/host.png",
+        "selectedIconPath": "./images/host_hover.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "保险",
+        "iconPath": "./images/san.png",
+        "selectedIconPath": "./images/san_hover.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "贷款",
+        "iconPath": "./images/money.png",
+        "selectedIconPath": "./images/money_hover.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "理财",
+        "iconPath": "./images/licai.png",
+        "selectedIconPath": "./images/licai_hover.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "./images/my.png",
+        "selectedIconPath": "./images/my_hover.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

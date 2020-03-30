@@ -1,0 +1,114 @@
+/**index.wxss**/
+/* 轮播 */
+.swiper image{
+  width: 100%;
+  height: 400rpx;
+}
+.swiper .swiper_inner{
+  height: 400rpx;
+}
+/* 滑动内容 */
+.slider_head{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.slider_head::before{
+  position: absolute;
+  left: 0px;
+  content: '';
+  display: block;
+  height: 40rpx;
+  width: 8rpx;
+  background-color: #f05a23;
+}
+.slider_head .right{
+  color: #f05a23;
+  display: block;
+  background-color: rgb(253,238,233);
+  border-radius: 40rpx;
+  padding:4rpx 16rpx;
+}
+.slider_main .scroll_view{
+  width: 750rpx;
+  white-space: nowrap;
+  height: 350rpx;
+}
+.scroll_view .scroll_content{
+  white-space: wrap;
+  width: 650rpx;
+  height: 350rpx;
+  display: inline-block;
+  padding: 20rpx;
+}
+.scroll_view .scroll_content image{
+  width: 650rpx;
+  height: 300rpx;
+  display: block;
+  border-radius: 20rpx;
+}
+/* 灰色条 */
+.grayTiao{
+  height: 20rpx;
+  background-color: #ddd;
+}
+/* 为你推荐内容 */
+.introduce_content{
+  padding: 20rpx;
+}
+.introduce_content .introduce_list{
+  border: 2rpx solid #ddd;
+  box-shadow: 0rpx 0rpx 20rpx 8rpx #ddd;
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40rpx;
+  border-radius: 10rpx;
+}
+.introduce_content .introduce_list view{
+  width: 300rpx;
+}
+.introduce_content .introduce_list image{
+  width: 300rpx;
+  height: 240rpx;
+  border-radius: 20rpx;
+}
+.introduce_content .introduce_list text{
+  margin-top: 20rpx;
+  display: block;
+}
+.introduce_content .introduce_list .button{
+  background-color: #f05a23;
+  color: white;
+  margin-top: 40rpx;
+  padding: 10rpx;
+  width: 140rpx;
+  border-radius: 10rpx;
+}
+.introduce_content .introduce_list .description{
+  font-size: 28rpx;
+  color: #999;
+}
+/* 底部 */
+.bottom .bottom_menu text{
+  color: #f05a23;
+  text-align: center;
+}
+.bottom_title{
+  margin: 50rpx ;
+}
+.bottom  .bottom_title text{
+  color: #f05a23;
+  display: block;
+  text-align: center;
+}
+.bottom_title .bottom_big_title{
+  font-size: 80rpx;
+  font-weight: bold;
+}
+.bottom text{
+  color: #999;
+  text-align: center;
+  display: block;
+  margin: 10rpx;
+}
