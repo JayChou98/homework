@@ -1,6 +1,11 @@
 <!--index.wxml-->
-<view class="box" >
-  <view class="list" wx:for='{{list}}' wx:key='index'>
-  {{item.classify}}
+<wxs module='fun' src='./function.wxs'></wxs>
+<view class='list' bindtap='toDetail'  wx:for='{{hospitalList}}' wx:key='index' data-id='{{item.id}}'>
+	<view class="img">
+		<image src='{{fun.ifImg(item.img)}}'></image>
+	</view>
+  <view class="text">
+    <text>{{fun.stringSlice(item.hosName)}}</text>
+    <text class="address">地址：{{fun.localStringSlice(item.addr)}}</text>
   </view>
 </view>

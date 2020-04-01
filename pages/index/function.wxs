@@ -1,0 +1,26 @@
+
+var fun = {
+	stringSlice: function(value){
+		return value.slice(0,8)
+  },
+  localStringSlice:function(value){
+    var i = value.indexOf('号')+1;
+    var newI= i==0?16:i;
+    return value.slice(0,newI)
+  },
+  ifImg:function(value){
+    return value?value:'../../image/loading.jpg';
+  },
+  ifContent:function(value){
+    console.log(value);
+    
+    return value?value:'没有内容'
+  }
+}
+// 导出对外暴露的属性
+module.exports = {
+  stringSlice:fun.stringSlice,
+  localStringSlice:fun.localStringSlice,
+  ifImg:fun.ifImg,
+  ifContent:fun.ifContent
+}

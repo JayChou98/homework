@@ -1,0 +1,8 @@
+<!--pages/detail/detail.wxml-->
+<wxs module='fun' src='../index/function.wxs'></wxs>
+<view>
+ <image src='{{fun.ifImg(detail.img)}}'></image>
+</view>
+<view>
+{{fun.ifContent(detail.info)}}
+</view>
