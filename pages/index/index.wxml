@@ -1,11 +1,22 @@
 <!--index.wxml-->
-<wxs module='fun' src='./function.wxs'></wxs>
-<view class='list' bindtap='toDetail'  wx:for='{{hospitalList}}' wx:key='index' data-id='{{item.id}}'>
-	<view class="img">
-		<image src='{{fun.ifImg(item.img)}}'></image>
-	</view>
-  <view class="text">
-    <text>{{fun.stringSlice(item.hosName)}}</text>
-    <text class="address">地址：{{fun.localStringSlice(item.addr)}}</text>
+<form bindsubmit="toSubmit">
+  <view class="item">
+  姓名: <input type="text" name='realname'></input>
   </view>
-</view>
+  <view class="item">
+  图片：<image src='{{localImg}}' bindtap="chanceImg"></image>
+  </view>
+  <input style="visibility:hidden;" name='imgurl' value="{{localImg}}"></input>
+  <view class="item">
+  性别:
+    <radio-group name='sex' class='radio'>
+      <radio value='男'>男</radio>
+      <radio value='女'>女</radio>
+    </radio-group>
+  </view>
+  <view class="item">
+  介绍:
+  <textarea name='produce'></textarea>
+  </view>
+  <button type='primary' form-type="submit">提交</button>
+</form>

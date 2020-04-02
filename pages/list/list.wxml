@@ -1,0 +1,9 @@
+<!--miniprogram/pages/list/list.wxml-->
+<view class="main" wx:for='{{list}}' wx:key='index'>
+	<view class="left"> <text>姓名：{{item.realname}}</text>
+		<text>性别：{{item.sex}}</text>
+	</view>
+	<view class="right">
+		<image src='{{item.imgurl}}'></image>
+	</view>
+</view>

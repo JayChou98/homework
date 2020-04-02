@@ -1,47 +1,41 @@
 //index.js
-//获取应用实例
-const app = getApp()
+const db = wx.cloud.database();
 Page({
   data:{
-    page:1
+    localImg:'/images/add.png'
   },
-  onLoad(){
-    var url='https://route.showapi.com/87-60?showapi_appid=167149&showapi_sign=f8b9f9cd6f9747b9ab6e16a06cf2bcc1&provinceName=北京';
-    this.setData({
-      url:url
-    })
-    wx.showLoading({
-      title: '加载中'
-    })
-    wx.request({
-      url:url,
-      success:res=>{
-       this.setData({
-         hospitalList:res.data.showapi_res_body.hospitalList
-       })
-       wx.hideLoading({})
-      }
+  toSubmit(e) {
+    console.log(e);
+    
+    var data = e.detail.value;
+    db.collection('users').add({
+      data:data
+    }).then(res=>{
+      console.log(res);
+    }).catch(err=>{
+      console.log(err);
     })
   },
-  onReachBottom(){
-    wx.showLoading({
-      title: '加载中'
-    })
-    wx.request({
-      url: this.data.url+'&page='+(this.data.page+1),
-      success:res=>{
-        let newHospitalList=this.data.hospitalList.concat(res.data.showapi_res_body.hospitalList)
-        this.setData({
-          hospitalList:newHospitalList
+  chanceImg(){
+    wx.chooseImage({
+      complete: (res) => {
+        var localImage=res.tempFilePaths[0];
+        var name = new Date().getTime();
+        var extend=/\.\w+$/.exec(localImage)[0];
+        var imgurl = name+extend;
+        wx.cloud.uploadFile({
+          cloudPath:imgurl,
+          filePath:localImage,
+          success:res=>{
+            this.setData({
+              localImg:res.fileID
+            })
+          },
+          fail:err=>{
+            console.log(err);
+          }
         })
-        wx.hideLoading({})
-      }
-    })
-  },
-  toDetail(e){
-    let id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: '/pages/detail/detail?id='+id
+      },
     })
   }
 })
