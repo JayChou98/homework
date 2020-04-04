@@ -1,0 +1,50 @@
+.wrap{
+  .category{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  image{
+    width: 130rpx;
+    height: 130rpx;
+  }
+}
+  .books{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #ddd;
+    .item{
+      width: 370rpx;
+      background: white;
+      margin-top: 10rpx;
+      image{
+        width: 370rpx;
+        height: 400rpx;
+      }
+      p {
+        .one {
+          border: 2rpx solid deeppink;
+          padding: 4rpx;
+          color: deeppink;
+          border-radius: 8rpx;
+          display: inline-block;
+          font-size: 24rpx;
+          margin-right: 10rpx;
+        }
+        .two {
+          color: white;
+          background: deeppink;
+          font-size: 24rpx;
+          display: inline-block;
+          padding: 8 rpx;
+          border-radius: 8rpx;
+        }
+      }
+      .price{
+        color: red;
+        font-size: 28rpx;
+      }
+    }
+  }
+
+}
